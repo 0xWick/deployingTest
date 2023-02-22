@@ -7,6 +7,9 @@ const app = express();
 app.use(express.json());
 
 // Routes
+app.get("/", (req, res) => {
+    res.status(200).json({Message: "Hello from Backend APIs!"})
+})
 app.use("/home", home);
 
 // connection
